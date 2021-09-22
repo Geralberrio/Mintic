@@ -12,7 +12,7 @@ h1{
     width: 150px;
     background-position: center center;
 }
-#landing_navbar{
+.landing_navbar{
     background-color: #65DCFF;
     display: flex;
     flex-direction: column;
