@@ -13,12 +13,12 @@ h1{
     background-position: center center;
 }
 .landing_navbar{
-    background-color: #65DCFF;
+    background-color: #9CE1EC;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 120vh;
     
 }
 
@@ -32,7 +32,7 @@ h1{
  }
  
  .seccion-principal{
-     background-color: #C5C5C5;
+     background-color: #CFD6D7;
      grid-column: 2;
      grid-row: 1;
      
@@ -49,7 +49,7 @@ h1{
  }
  
  .body{
-     background-color: #65DCFF;
+     background-color: #9CE1EC;
  }
  .contenedor{
     width: 95%;
@@ -60,7 +60,7 @@ h1{
     
 }
 .fieldset{
-    background-color: pink; 
+    background-color: #CFD6D7; 
 }
 
 .seccion {
