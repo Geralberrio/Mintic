@@ -1,0 +1,138 @@
+h1{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+#landing_navbar img{
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    width: 150px;
+    background-position: center center;
+}
+#landing_navbar{
+    background-color: #65DCFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    
+}
+
+#btn_irRegistro{
+        margin-bottom: 3rem;
+        padding: 1rem;      
+ }
+ #btn_irRegistro:hover {
+    background-color: grey;
+    cursor: pointer;
+ }
+ 
+ .seccion-principal{
+     background-color: #C5C5C5;
+     grid-column: 2;
+     grid-row: 1;
+     
+ }
+ .texto-central{
+     margin: 0 4rem;
+     font-size: 1.5rem;
+     text-align: center;
+ }
+ 
+ .header{
+     text-align: center;
+     font-size: 2rem;
+ }
+ 
+ .body{
+     background-color: #65DCFF;
+ }
+ .contenedor{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+ }
+#form_registro_usuario{
+    
+}
+.fieldset{
+    background-color: pink; 
+}
+
+.seccion {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.contenido-centrado {
+    max-width: 40rem;
+}
+label{
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+input:not([type="submit"]), 
+textarea,
+select {
+        padding: 1rem;
+        display: block;
+        width: 95%;
+        background-color: white;
+        border: 1px solid grey;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+    legend{
+        font-size: 1.2rem;
+    }
+    
+    .main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        text-align: center;
+    }
+    
+.contenido1{
+    display: flex;
+    flex-direction: column;
+   align-items: center;    
+}
+    
+.contenido2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.contenido1 img{
+        width: 5rem;
+        height: 5rem;
+        margin: 2rem 1rem 1rem 1rem;
+        border-radius: 100%;
+    }
+.contenido2 img{
+        width: 5rem;
+        height: 5rem;
+        margin: 2rem 1rem 1rem 1rem;
+        border-radius: 100%;
+    }
+.contenido1 h3{
+    margin: 0;
+}
+.contenido2 h3{
+    margin: 0;
+}
+.contenido1 p{
+   margin: 1rem 5rem; 
+}
+.contenido2 p{
+   margin: 1rem 5rem; 
+}
