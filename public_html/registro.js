@@ -2,14 +2,18 @@
 let registros = [];
 
 function agregarRegistro(){
-    let form = document.form_registro_usuario;
-    registros.push([form.in_usuario.value,form.in_contrasena.value]);
+    let registro_unit = [];
+    var usuario_form = document.getElementById("in_usuario").value;
+    var contrasena_form = document.getElementById("in_contrasena").value;
+    registro_unit['usario']= usuario_form;
+    registro_unit['contrasena'] = contrasena_form;
+    registros.push(registro_unit);
 }
 
 function filtrarPorContrasena(arreglo,filtro){
     var arreglo_validador = [];
     for (var i=0; i < arreglo.length; i++){
-        if (arreglo[i][0].length <= filtro) {
+        if (arreglo[i]['contrasena'].length <= filtro) {
             arreglo_validador.push(arreglo[i]);
         }
     }
