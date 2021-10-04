@@ -1,6 +1,6 @@
 
 let registros = [];
-
+/*
 function agregarRegistro(){
     let registro_unit = [];
     var usuario_form = document.getElementById("in_usuario").value;
@@ -8,6 +8,19 @@ function agregarRegistro(){
     registro_unit['usario']= usuario_form;
     registro_unit['contrasena'] = contrasena_form;
     registros.push(registro_unit);
+}*/
+
+function agregarRegistro(){
+    function registro(usuario,contrasena){
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+    }
+    
+    var capturarUsuario = document.getElementById("in_usuario").value;
+    var capturarContrasena = document.getElementById("in_contrasena").value;
+    var nuevoRegistro = new registro(capturarUsuario,capturarContrasena);
+    registros.push(nuevoRegistro);
+    console.log(registros);
 }
 
 function filtrarPorContrasena(arreglo,filtro){
