@@ -16,7 +16,6 @@ function validar_contrasena(string){
     
     return rta;
 }
-/*
+
 module.exports.validar_nombreUsuario = validar_nombreUsuario;
 module.exports.validar_contrasena = validar_contrasena;
-*/
