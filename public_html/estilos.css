@@ -367,14 +367,25 @@ Para Celular*/
 #form_registro_usuario{
     
 }
-.fieldset{
+
+.fieldset_inicio_sesion{
     background-color: #fff;
     width: 800px;
-    height: 300px;
+    height: 500px;
     margin-left: -100px;
     padding:10px 10px 10px 15px;
     
 }
+
+.fieldset{
+    background-color: #fff;
+    width: 800px;
+    height: 500px;
+    margin-left: -100px;
+    padding:10px 10px 10px 15px;
+    
+}
+
 .seccion {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -401,3 +412,4 @@ legend{
     text-align: center;
     
 }
+
