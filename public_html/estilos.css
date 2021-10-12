@@ -45,12 +45,12 @@ Canbios para hacer responsive la página del Index
 _________________________________________________
 
 Para Celular*/
-@media only screen and (min-width:320px) and (max-width:540px){
+@media only screen and (min-width:320px) and (max-width:480px){
     
 }
 
 /*Para tablet*/
-@media only screen and (min-width:541px) and (max-width:1024px){
+@media only screen and (min-width:481px) and (max-width:1024px){
     
 }
 
@@ -339,12 +339,12 @@ Canbios para hacer responsive la página de registro
 ____________________________________________________
 
 Para Celular*/
-@media only screen and (min-width:320px) and (max-width:540px){
+@media only screen and (min-width:320px) and (max-width:480px){
     
 }
 
 /*Para tablet*/
-@media only screen and (min-width:541px) and (max-width:1024px){
+@media only screen and (min-width:481px) and (max-width:1024px){
     
 }
 
@@ -372,9 +372,9 @@ Para Celular*/
     width: 800px;
     height: 300px;
     margin-left: -100px;
+    padding:10px 10px 10px 15px;
     
 }
-
 .seccion {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
