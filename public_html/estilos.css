@@ -22,21 +22,33 @@
 /*Garantizar que el body ocupe el 100%*/
 body{
     height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
 }
 
 input:not([type="submit"]), 
 textarea,
 select {
-        padding: 1rem;
-        display: block;
-        width: 95%;
-        background-color: white;
-        border: 1px solid grey;
-        border-radius: 1rem;
-        margin-bottom: 2rem;
+    padding: 1rem;
+    display: block;
+    width: 95%;
+    background-color: rgba(76, 65, 119, 0.05);
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 2rem;
     }
     legend{
         font-size: 1.2rem;
+    }
+    .fieldset div{
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        font-weight: bold;
+        font-family: hind;
+        opacity: .3;
+        text-transform: uppercase;
     }
     
 
@@ -396,11 +408,22 @@ Para Celular*/
 
 .fieldset{
     background-color: #fff;
-    width: 800px;
-    height: 300px;
-    margin-left: -100px;
-    padding:10px 10px 10px 15px;
-    
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    z-index: 999999;
+    position: relative;
+}
+
+.fieldset label{
+    font-family: hind;
+}
+
+input:not([type="submit"])::placeholder, select::placeholder{
+    opacity: .3;
+    font-size: 15px;
+    font-weight:400;
 }
 
 .seccion {
@@ -413,20 +436,28 @@ Para Celular*/
 label{
     display: block;
     font-weight: bold;
-    text-transform: uppercase;
     font-size: 1rem;
     margin-top: 1rem;
-    
+    opacity: .5;
+    letter-spacing: 1px;
 }
 
-legend{
-    color:#fff;
+.btn-input{
+    margin-bottom: 3rem;
+    padding: 15px 20px;
     background-color: #4c4177;
     background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
     font-weight: bold;
-    height: 30px;
-    width: 400px;
-    text-align: center;
-    
+    cursor: pointer;
+}
+.btn-input:hover{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.1), 0 15px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition:ease transform .1s;
 }
 
