@@ -22,9 +22,9 @@ function validar_captcha(rcaptcha){
     return validar;
 }
 
-function iniciar_sesion(usuario = document.document.getElementById("login_usuario").value, 
-                        contrasena = document.document.getElementById("login_contrasena").value,
-                        rcaptcha=document.document.getElementById("login_captcha").value){
+function iniciar_sesion(usuario = document.getElementById("login_usuario").value, 
+                        contrasena = document.getElementById("login_contrasena").value,
+                        rcaptcha=document.getElementById("login_captcha").value){
    var prueba = false;
    for (var i=0; i < registros.length; i++){
         if (registros[i]['usuario']=== usuario & 
