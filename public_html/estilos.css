@@ -7,29 +7,89 @@
     font-family: aileron;
     src: url(assets/fuentes/Aileron-Black.otf);
 }
-
 @font-face {
     font-family: hind;
     src: url(assets/fuentes/Hind-Light.ttf);
 }
-
-/*Seleccion de todos los elementos del documento*/
 *{
     padding: 0px;
-    margin: 0px;   
+    margin: 0px;
+    font-family: hind;
 }
-
-/*Garantizar que el body ocupe el 100%*/
+a{
+    text-decoration: none;
+}
 body{
     height: 100vh;
     overflow: hidden;
     display: block;
     position: relative;
+    text-align: center;
 }
 
-input:not([type="submit"]), 
-textarea,
-select {
+@media (max-width: 991.98px) {
+    body{
+        overflow: initial;
+        height: auto;
+    }
+ }
+
+
+
+.fondo-morado{
+    background-color: #4c4177;
+    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+    color: #fff;
+}
+.btn{
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.btn:hover{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.1), 0 15px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition:ease transform .1s;
+}
+
+/*---------------------------
+Formularios
+-----------------------------*/
+
+main{
+    width: 100%;
+    padding: 0px auto;
+}
+
+form{
+    display: block;
+    width: 100%;
+    margin: 0px;
+}
+.fieldset{
+    background-color: #fff;
+    color: #78909C;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    z-index: 999999;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    max-width: 40rem;
+    margin: 0px auto;
+}
+input:not([type="submit"])::placeholder, select::placeholder{
+    opacity: .3;
+    font-size: 15px;
+    font-weight:400;
+}
+input:not([type="submit"]), textarea, select {
     padding: 1rem;
     display: block;
     width: 95%;
@@ -37,48 +97,72 @@ select {
     border: none;
     border-radius: 3px;
     margin-bottom: 2rem;
-    }
-    legend{
-        font-size: 1.2rem;
-    }
-    .fieldset div{
-        font-size: 20px;
-        letter-spacing: 1.5px;
-        text-align: center;
-        font-weight: bold;
-        font-family: hind;
-        opacity: .3;
-        text-transform: uppercase;
-    }
-    
-
-/*_______________________________________________
-Canbios para hacer responsive la página del Index
-_________________________________________________
-
-Para Celular*/
-@media only screen and (min-width:320px) and (max-width:480px){
-    
+}
+label{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
 }
 
-/*Para tablet*/
-@media only screen and (min-width:481px) and (max-width:1024px){
-    
-}
+/*---------------------------
+Cuadros de contenido
+-----------------------------*/
 
-/*Para escritorio*/
-@media only screen and (min-width:1025px){
-    
-}
-
-/*Grilla de la presentación de toda la pagina*/
-.grid{
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    height: 100%;
+.contenido{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: relative;
-    overflow: hidden;
+    z-index: 9999999;
 }
+
+.contenido .card{
+    height: 100%;
+    padding: 0px 30px;
+    flex-grow: 1;
+}
+
+.contenido img{
+    width: 2.5rem;
+    height: auto;
+    margin: 0px;
+}  
+.contenido span{
+    border: solid 4px;
+    padding: 15px;
+    border-radius: 100%;
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    opacity: .5;
+    margin-bottom: 40px;
+}  
+.contenido p{
+   color: #fff;
+   font-size: 20px;
+   line-height: 25px;
+   opacity: .9;
+   margin-top: 30px;
+}
+
+@media (max-width: 991.98px) {
+    .contenido{
+        flex-direction: column;
+    }
+    .contenido .card{
+        margin-top: 150px;
+    }
+ }
+
+ @media (max-width: 767.98px) {
+
+  }
+
+/*---------------------------
+Navbar
+-----------------------------*/
 
 #landing_navbar img{
     margin-top: 3rem;
@@ -98,177 +182,45 @@ Para Celular*/
     -moz-box-shadow: 5px 1px 24px 0px rgba(42,36,66,0.75);
 }
 
-#btn_irRegistro{
-    margin-bottom: 3rem;
-    padding: 20px 25px;
-    background-color: #4c4177;
-    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
-    border: none;
-    color: #fff;
-    border-radius: 30px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
- }
- #btn_irRegistro:hover {
-    background-color: grey;
-    cursor: pointer;
- }
- 
- #btn_irInicioSesion{
-    margin-bottom: 3rem;
-    padding: 20px 25px;
-    background-color: #4c4177;
-    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
-    border: none;
-    color: #fff;
-    border-radius: 30px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
- }
- #btn_irInicioSesion:hover {
-    background-color: grey;
-    cursor: pointer;
+@media (max-width: 991.98px) {
+    .landing_navbar{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translateX(-100%);
+    }
  }
 
- /*contenedor de la sección principal*/
- .seccion-principal{
-    background-color: #4c4177;
-    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);   
-    /*background: linear-gradient(-45deg, #2a5470, #4c4177,#09203f, #537895);*/
-    background-size: cover;
-    /*animation: change 20s ease-in-out infinite;*/
-    grid-column: 2;
-    grid-row: 1;
-    position: relative;
- }
- 
- /*Espacio del titulo*/
-header{
-    margin-top: 50px;
-    text-align: center;
-    font-size: 2rem;
-    position: relative;
-    display: block;
-    z-index: 2;
-    display: block;
-}
+/*---------------------------
+Titulos
+-----------------------------*/
 
- /*Texto del titulo principal*/
-h1{
+h1, h2, h3, h4{
     font-family: aileron;
-    text-align: center;
     text-transform: uppercase;
+    color: #fff;
+}
+h1{
     letter-spacing: 4px;
     font-size: 80px;
-    line-height: 60px;
-    margin-bottom: 30px;
-    color: #fff;
+    line-height: 70px;
+    padding-bottom: 30px;
 }
-
-/*Texto de descripción del objetivo de la página Web*/
-.texto-superior{
-    font-family: hind;
-    font-weight: lighter;
+ h2{
     font-size: 20px;
     line-height: 22px;
-    color: #fff;
-    opacity: .9;
 }
-
-/*texto del texto acompañante del titulo*/
- .texto-central{
-     margin: 0 4rem;
-     font-size: 1.5rem;
-     text-align: center;
- }
- 
- /*Texto de invitación a registrarse*/
-h2{
-    font-family: aileron;
-    font-size: 20px;
-    line-height: 22px;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-/*Separación para presentar los 4 productos en 2 columnas*/
-.main{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        text-align: center;
-        padding-top: 35px;
-    }
-
-.contenido1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: block;
-    position: relative;
-}
-    
-.contenido2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: block;
-    position: relative;
-}
-
-.contenido1 img{
-    width: 2.5rem;
-    height: auto;
-    margin: 2rem 1rem 1rem 1rem;
-    opacity: .5;
-}
-    
-.contenido2 img{
-    width: 2.5rem;
-    height: auto;
-    margin: 2rem 1rem 1rem 1rem;
-    opacity: .5;
-    }
-    
-.contenido1 h3{
-    margin: 0;
-}
-
-.contenido2 h3{
-    margin: 0;
-}
-
-.contenido1 p{
-   margin: 1rem 5rem; 
-}
-
-.contenido2 p{
-   margin: 1rem 5rem; 
-}
-/*Separación para presentar los 4 productos en 2 columnas*/
-
-/*Texto de los titulos de los productos/servicios */
 h3{
-    font-family: aileron;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    font-size: 25px;
-    line-height: 28px;
-    color: #fff;
-}
-
- /*Parrafos*/
-p{
-    font-family: hind;
-    color: #fff;
+    letter-spacing: 3px;
     font-size: 20px;
-    line-height: 25px;
-    opacity: .9;
+    line-height: 20px;
 }
 
-/*Animación del fondo de la sección principal*/
+
+/*---------------------------
+Animaciones
+-----------------------------*/
+
 .cont-animacion{
     position: absolute;
     top: 0px;
@@ -280,8 +232,6 @@ p{
     display: block;
     z-index: 1;
   }
- 
-  /*Elementos de la animación*/
   .cont-animacion li{
     position: absolute;
     display: block;
@@ -294,14 +244,12 @@ p{
     bottom: -150px;
     border-radius: 100%;
   }
-  
   .cont-animacion li:nth-child(1){
     left: 86%;
     width: 80px;
     height: 80px;
     animation-delay: 0s ;
   }
-  
   .cont-animacion li:nth-child(2){
     left: 12%;
     width: 30px;
@@ -309,14 +257,12 @@ p{
     animation-delay: 1.5s;
     animation-duration: 10s;
   }
-  
   .cont-animacion li:nth-child(3){
     left: 70%;
     width: 100px;
     height: 100px;
     animation-delay: 5.5s ;
   }
-  
   .cont-animacion li:nth-child(4){
     left: 42%;
     width: 150px;
@@ -324,23 +270,18 @@ p{
     animation-delay: 0s ;
     animation-duration: 15s;
   }
-  
   .cont-animacion li:nth-child(5){
     left: 65%;
     width: 40px;
     height: 40px;
     animation-delay: 0s;
   }
-  
   .cont-animacion li:nth-child(6){
     left: 15%;
     width: 110px;
     height: 110px;
     animation-delay: 3.5s;
   }
-  /*Elementos de animación*/
-
-/*animación del fondo de la sección principal*/  
 @keyframes animate{
     0%{
       transform: translateY(0) rotate(0deg);
@@ -351,7 +292,6 @@ p{
       opacity: 0;
     }
   }
-
  @keyframes change{
     0%{
       background-position: 0 50%;
@@ -362,7 +302,100 @@ p{
     100%{
       background-position: 0 50%;
     }
-  } 
+  }
+
+/*---------------------------
+Header
+-----------------------------*/
+   
+header{
+    padding-top: 50px;
+    font-size: 2rem;
+    position: relative;
+    display: block;
+    z-index: 2;
+    display: block;
+}
+
+.texto-superior{
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 22px;
+    opacity: .9;
+}
+ .texto-central{
+     margin: 0 4rem;
+     font-size: 1.5rem;
+ }
+
+
+/*---------------------------
+Secciones y rejillas generales
+-----------------------------*/
+
+  /*contenedor de la sección principal*/
+  .seccion-principal{
+    background-size: cover;
+    position: relative;
+ }
+
+ @media (max-width: 991.98px) {
+    .seccion-principal{
+        padding-bottom: 200px;
+    }
+ }
+
+
+ /*Grilla de la presentación de toda la pagina*/
+.grid{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 991.98px) {
+    .grid{
+        display: block;
+    }
+}
+
+ 
+/*Separación para presentar los 4 productos en 2 columnas*/
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 35px;
+    margin-top: 100px;
+}
+@media (max-width: 767.98px) {
+    .main{
+        display: block;
+    } 
+}
+
+
+/*-----------------------------------------------
+Canbios para hacer responsive la página del Index
+Para Celular - Por ordenar
+-------------------------------------------------*/
+
+
+@media only screen and (min-width:320px) and (max-width:480px){
+    
+}
+
+/*Para tablet*/
+@media only screen and (min-width:481px) and (max-width:1024px){
+    
+}
+
+/*Para escritorio*/
+@media only screen and (min-width:1025px){
+    
+}
+
 /*__________________________________________________
 Canbios para hacer responsive la página de registro
 ____________________________________________________
@@ -379,85 +412,5 @@ Para Celular*/
 
 /*Para escritorio*/
 @media only screen and (min-width:1025px){
-    
-}
-.body{
-    background-color: #4c4177;
-    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
-}
 
-/*Contenedor del formulario*/
- .contenedor{
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
- }
-
-#form_registro_usuario{
-    
 }
-
-.fieldset_inicio_sesion{
-    background-color: #fff;
-    width: 800px;
-    height: 500px;
-    margin-left: -100px;
-    padding:10px 10px 10px 15px;
-    
-}
-
-.fieldset{
-    background-color: #fff;
-    padding: 20px 30px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    z-index: 999999;
-    position: relative;
-}
-
-.fieldset label{
-    font-family: hind;
-}
-
-input:not([type="submit"])::placeholder, select::placeholder{
-    opacity: .3;
-    font-size: 15px;
-    font-weight:400;
-}
-
-.seccion {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-}
-.contenido-centrado {
-    max-width: 40rem;
-}
-label{
-    display: block;
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 1rem;
-    opacity: .5;
-    letter-spacing: 1px;
-}
-
-.btn-input{
-    margin-bottom: 3rem;
-    padding: 15px 20px;
-    background-color: #4c4177;
-    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-}
-.btn-input:hover{
-    box-shadow: 0 19px 38px rgba(0,0,0,0.1), 0 15px 12px rgba(0,0,0,0.1);
-    transform: translateY(-2px);
-    transition:ease transform .1s;
-}
-
